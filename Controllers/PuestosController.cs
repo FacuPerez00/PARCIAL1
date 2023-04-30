@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using PARCIAL1.Data;
-using PARCIAL_N_1.Models;
+using PARCIAL1.Models;
 
 namespace PARCIAL1.Controllers
 {

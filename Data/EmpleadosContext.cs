@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using PARCIAL_N_1.Models;
+using PARCIAL1.Models;
 
 namespace PARCIAL1.Data
 {
@@ -14,6 +14,6 @@ namespace PARCIAL1.Data
         {
         }
 
-        public DbSet<PARCIAL_N_1.Models.Empleados> Empleados { get; set; } = default!;
+        public DbSet<PARCIAL1.Models.Empleados> Empleados { get; set; } = default!;
     }
 }

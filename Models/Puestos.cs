@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace PARCIAL_N_1.Models;
+namespace PARCIAL1.Models;
 
 public class Puestos{
     public int id {get; set;}
@@ -8,5 +8,7 @@ public class Puestos{
     public string apellido {get; set;}
     public string puesto {get;set;}
     public string sector {get;set;}
+     public int EmpleadoId { get; set;}
+    public virtual Empleados Empleados { get; set; }
     
 }
