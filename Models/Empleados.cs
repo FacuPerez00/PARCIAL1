@@ -9,5 +9,5 @@ public class Empleados{
     public int edad {get; set;}
     public int sueldo{get; set;}
     public int Ambiguedad {get;set;}
-    public virtual List<Puestos> Puestos { get; set; }
+    public virtual List<Puestos> ?Puestos { get; set; }
 }

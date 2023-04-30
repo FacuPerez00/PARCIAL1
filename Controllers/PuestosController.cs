@@ -12,9 +12,9 @@ namespace PARCIAL1.Controllers
 {
     public class PuestosController : Controller
     {
-        private readonly PuestosContext _context;
+        private readonly EmpleadosContext _context;
 
-        public PuestosController(PuestosContext context)
+        public PuestosController(EmpleadosContext context)
         {
             _context = context;
         }
@@ -24,7 +24,7 @@ namespace PARCIAL1.Controllers
         {
               return _context.Puestos != null ? 
                           View(await _context.Puestos.ToListAsync()) :
-                          Problem("Entity set 'PuestosContext.Puestos'  is null.");
+                          Problem("Entity set 'EmpleadosContext.Puestos'  is null.");
         }
 
         // GET: Puestos/Details/5
@@ -56,7 +56,7 @@ namespace PARCIAL1.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,name,apellido,puesto,sector")] Puestos puestos)
+        public async Task<IActionResult> Create([Bind("id,EmpleadoId,puesto,sector")] Puestos puestos)
         {
             if (ModelState.IsValid)
             {
@@ -88,7 +88,7 @@ namespace PARCIAL1.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("id,name,apellido,puesto,sector")] Puestos puestos)
+        public async Task<IActionResult> Edit(int id, [Bind("id,EmpleadoId,puesto,sector")] Puestos puestos)
         {
             if (id != puestos.id)
             {
@@ -143,7 +143,7 @@ namespace PARCIAL1.Controllers
         {
             if (_context.Puestos == null)
             {
-                return Problem("Entity set 'PuestosContext.Puestos'  is null.");
+                return Problem("Entity set 'EmpleadosContext.Puestos'  is null.");
             }
             var puestos = await _context.Puestos.FindAsync(id);
             if (puestos != null)

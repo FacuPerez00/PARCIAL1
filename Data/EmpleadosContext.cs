@@ -15,5 +15,7 @@ namespace PARCIAL1.Data
         }
 
         public DbSet<PARCIAL1.Models.Empleados> Empleados { get; set; } = default!;
+
+        public DbSet<PARCIAL1.Models.Puestos> Puestos { get; set; } = default!;
     }
 }
