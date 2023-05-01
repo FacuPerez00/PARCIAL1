@@ -33,28 +33,25 @@ namespace PARCIAL1.Migrations
                 {
                     id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    name = table.Column<string>(type: "TEXT", nullable: false),
-                    apellido = table.Column<string>(type: "TEXT", nullable: false),
-                    puesto = table.Column<string>(type: "TEXT", nullable: false),
-                    sector = table.Column<string>(type: "TEXT", nullable: false),
                     EmpleadoId = table.Column<int>(type: "INTEGER", nullable: false),
-                    Empleadosid = table.Column<int>(type: "INTEGER", nullable: false)
+                    puesto = table.Column<string>(type: "TEXT", nullable: false),
+                    sector = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Puestos", x => x.id);
                     table.ForeignKey(
-                        name: "FK_Puestos_Empleados_Empleadosid",
-                        column: x => x.Empleadosid,
+                        name: "FK_Puestos_Empleados_EmpleadoId",
+                        column: x => x.EmpleadoId,
                         principalTable: "Empleados",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Puestos_Empleadosid",
+                name: "IX_Puestos_EmpleadoId",
                 table: "Puestos",
-                column: "Empleadosid");
+                column: "EmpleadoId");
         }
 
         /// <inheritdoc />

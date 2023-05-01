@@ -7,6 +7,6 @@ public class Puestos{
     public int EmpleadoId { get; set;}
     public string puesto {get;set;}
     public string sector {get;set;}
-    public virtual Empleados ?Empleados { get; set; }
+    public virtual Empleados ?Empleado { get; set; }
     
 }

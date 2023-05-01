@@ -10,8 +10,8 @@ using PARCIAL1.Data;
 namespace PARCIAL1.Migrations
 {
     [DbContext(typeof(EmpleadosContext))]
-    [Migration("20230430230317_puestos")]
-    partial class puestos
+    [Migration("20230430235200_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -56,9 +56,6 @@ namespace PARCIAL1.Migrations
                     b.Property<int>("EmpleadoId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Empleadosid")
-                        .HasColumnType("INTEGER");
-
                     b.Property<string>("puesto")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -69,20 +66,20 @@ namespace PARCIAL1.Migrations
 
                     b.HasKey("id");
 
-                    b.HasIndex("Empleadosid");
+                    b.HasIndex("EmpleadoId");
 
                     b.ToTable("Puestos");
                 });
 
             modelBuilder.Entity("PARCIAL1.Models.Puestos", b =>
                 {
-                    b.HasOne("PARCIAL1.Models.Empleados", "Empleados")
+                    b.HasOne("PARCIAL1.Models.Empleados", "Empleado")
                         .WithMany("Puestos")
-                        .HasForeignKey("Empleadosid")
+                        .HasForeignKey("EmpleadoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Empleados");
+                    b.Navigation("Empleado");
                 });
 
             modelBuilder.Entity("PARCIAL1.Models.Empleados", b =>

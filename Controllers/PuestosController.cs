@@ -22,9 +22,8 @@ namespace PARCIAL1.Controllers
         // GET: Puestos
         public async Task<IActionResult> Index()
         {
-              return _context.Puestos != null ? 
-                          View(await _context.Puestos.ToListAsync()) :
-                          Problem("Entity set 'EmpleadosContext.Puestos'  is null.");
+            var empleadosContext = _context.Puestos.Include(p => p.Empleado);
+            return View(await empleadosContext.ToListAsync());
         }
 
         // GET: Puestos/Details/5
@@ -36,6 +35,7 @@ namespace PARCIAL1.Controllers
             }
 
             var puestos = await _context.Puestos
+                .Include(p => p.Empleado)
                 .FirstOrDefaultAsync(m => m.id == id);
             if (puestos == null)
             {
@@ -48,6 +48,7 @@ namespace PARCIAL1.Controllers
         // GET: Puestos/Create
         public IActionResult Create()
         {
+            ViewData["EmpleadoId"] = new SelectList(_context.Empleados, "id", "id");
             return View();
         }
 
@@ -64,6 +65,7 @@ namespace PARCIAL1.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["EmpleadoId"] = new SelectList(_context.Empleados, "id", "id", puestos.EmpleadoId);
             return View(puestos);
         }
 
@@ -80,6 +82,7 @@ namespace PARCIAL1.Controllers
             {
                 return NotFound();
             }
+            ViewData["EmpleadoId"] = new SelectList(_context.Empleados, "id", "id", puestos.EmpleadoId);
             return View(puestos);
         }
 
@@ -115,6 +118,7 @@ namespace PARCIAL1.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["EmpleadoId"] = new SelectList(_context.Empleados, "id", "id", puestos.EmpleadoId);
             return View(puestos);
         }
 
@@ -127,6 +131,7 @@ namespace PARCIAL1.Controllers
             }
 
             var puestos = await _context.Puestos
+                .Include(p => p.Empleado)
                 .FirstOrDefaultAsync(m => m.id == id);
             if (puestos == null)
             {
