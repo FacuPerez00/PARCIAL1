@@ -18,4 +18,5 @@ namespace PARCIAL1.Data
 
         public DbSet<PARCIAL1.Models.Puestos> Puestos { get; set; } = default!;
     }
+    
 }
