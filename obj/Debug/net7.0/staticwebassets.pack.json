@@ -13,6 +13,18 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Facu Perez\\OneDrive\\Documentos\\PROGRAMACION- ISTEA\\Herramientas de Programacion\\PARCIAL1\\wwwroot\\img\\Empleados FP.png",
+      "PackagePath": "staticwebassets\\img\\Empleados FP.png"
+    },
+    {
+      "Id": "C:\\Users\\Facu Perez\\OneDrive\\Documentos\\PROGRAMACION- ISTEA\\Herramientas de Programacion\\PARCIAL1\\wwwroot\\img\\LOGO FP.png",
+      "PackagePath": "staticwebassets\\img\\LOGO FP.png"
+    },
+    {
+      "Id": "C:\\Users\\Facu Perez\\OneDrive\\Documentos\\PROGRAMACION- ISTEA\\Herramientas de Programacion\\PARCIAL1\\wwwroot\\img\\puestos fp.jpg",
+      "PackagePath": "staticwebassets\\img\\puestos fp.jpg"
+    },
+    {
       "Id": "C:\\Users\\Facu Perez\\OneDrive\\Documentos\\PROGRAMACION- ISTEA\\Herramientas de Programacion\\PARCIAL1\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

@@ -20,11 +20,18 @@ namespace PARCIAL1.Controllers
         }
 
         // GET: Empleados
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string buscar)
         {
-              return _context.Empleados != null ? 
-                          View(await _context.Empleados.ToListAsync()) :
-                          Problem("Entity set 'EmpleadosContext.Empleados'  is null.");
+            var usuarios= from usuario in _context.Empleados select usuario;
+           
+            if(!String.IsNullOrEmpty(buscar))
+            {
+                usuarios=usuarios.Where(s=>s.name!.Contains(buscar)|| s.apellido.Contains(buscar));
+             
+            }
+              return View(await usuarios.ToListAsync());
+
+        
         }
 
         // GET: Empleados/Details/5
