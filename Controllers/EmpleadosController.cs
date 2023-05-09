@@ -26,7 +26,7 @@ namespace PARCIAL1.Controllers
            
             if(!String.IsNullOrEmpty(buscar))
             {
-                usuarios=usuarios.Where(s=>s.name!.Contains(buscar)|| s.apellido.Contains(buscar));
+                usuarios=usuarios.Where(s=>s.name!.Contains(buscar)||s.apellido.Contains(buscar));
              
             }
               return View(await usuarios.ToListAsync());
