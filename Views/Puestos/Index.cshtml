@@ -11,6 +11,13 @@
 <p>
     <a asp-action="Create" button class="btn btn-succes">Create New</a>
 </p>
+<form asp-controller="Puestos" asp-action="Index">
+    <p>
+        Buscar: <input type="text" puesto="buscar" sector="buscar" class="form-text"/>
+        <input type="submit" value="Buscar" class="btn btn-sm btn-dark"/>
+    </p>
+
+</form>
 <table class="table">
     <thead>
         <tr>
@@ -46,4 +53,6 @@
         </tr>
 }
     </tbody>
+    <a href="http://localhost:5071/Empleados">Ir a Empleados</a> <br>
+    <a href="http://localhost:5071">Volver al inicio</a>
 </table>

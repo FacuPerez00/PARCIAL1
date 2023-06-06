@@ -20,7 +20,7 @@ namespace PARCIAL1.Controllers
         }
 
         // GET: Puestos
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string buscar)
         {
             var empleadosContext = _context.Puestos.Include(p => p.Empleado);
             return View(await empleadosContext.ToListAsync());

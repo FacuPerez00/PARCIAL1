@@ -8,13 +8,14 @@
 <style>img{width:250px; height:150px ;}</style>
 <img src="~/img/Empleados FP.png" align="right">
 
+
 <p>
     <a asp-action="Create" button class="btn btn-succes">Create New</a>
 </p>
 
 <form asp-controller="Empleados" asp-action="Index">
     <p>
-        Buscar: <input type="text" name= "buscar" class="form-text"/>
+        Buscar: <input type="text" name= "buscar" apellido="buscar" class="form-text"/>
         <input type="submit" value="Buscar" class="btn btn-sm btn-dark"/>
     </p>
 
@@ -72,4 +73,6 @@
         </tr>
 }
     </tbody>
+  <a href="http://localhost:5071/Puestos">Ir a puestos</a><br>
+  <a href="http://localhost:5071">Volver al inicio</a>
 </table>
