@@ -9,9 +9,13 @@
 
 <style> body{background-color:rgb(90, 230, 90)} img{width:250px;height:150px}</style>
 <center><img src="~/img/LOGO FP.png"></center> <br>
+
+@if (User.Identity !=null && User.IsInRole(string role))
+{
 <h3>Domicilio: Platon 5855</h3><br>
 <h3>Localidad: Jose C Paz, CP:1665</h3><br>
 <h3>Tel. de Contacto: 1164109206</h3><br>
+}
 
 
 
