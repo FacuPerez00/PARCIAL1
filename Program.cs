@@ -1,21 +1,25 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
+
 using PARCIAL1.Data;
+using PARCIAL1.Services;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
 builder.Services.AddDbContext<EmpleadosContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("EmpleadosContext") ?? throw new InvalidOperationException("Connection string 'EmpleadosContext' not found.")));
 
 
 
-builder.Services.AddControllersWithViews();
+// Add services to the container.
 builder.Services.AddDefaultIdentity<IdentityUser>()
     .AddRoles<IdentityRole>()
-    .AddEntityFrameworkStores<ApplicationDbContext>();
+    .AddEntityFrameworkStores<EmpleadosContext>();
+
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddScoped<IEmpleadosService, EmpleadosService>();
+builder.Services.AddScoped<IPuestosService, PuestosService>();
 
 var app = builder.Build();
 
@@ -38,4 +42,5 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
+
 app.Run();

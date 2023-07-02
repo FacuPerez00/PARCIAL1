@@ -7,36 +7,38 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using PARCIAL1.Data;
 using PARCIAL1.Models;
+using PARCIAL1.Services;
 
 namespace PARCIAL1.Controllers
 {
     public class PuestosController : Controller
     {
-        private readonly EmpleadosContext _context;
 
-        public PuestosController(EmpleadosContext context)
+        private readonly IPuestosService _puestosService;
+        private object  puestosView;
+        private readonly object puestos;
+
+        public PuestosController(IPuestosService puestosService)
         {
-            _context = context;
+           _puestosService=puestosService;
         }
 
         // GET: Puestos
-        public async Task<IActionResult> Index(string buscar)
+        public  IActionResult Index()
         {
-            var empleadosContext = _context.Puestos.Include(p => p.Empleado);
-            return View(await empleadosContext.ToListAsync());
+              var list = _puestosService.GetAll();
+            return View(list);
         }
 
         // GET: Puestos/Details/5
-        public async Task<IActionResult> Details(int? id)
+       public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.Puestos == null)
+            if (id == null)
             {
                 return NotFound();
             }
 
-            var puestos = await _context.Puestos
-                .Include(p => p.Empleado)
-                .FirstOrDefaultAsync(m => m.id == id);
+            var puestos = _puestosService.GetById(id.Value);
             if (puestos == null)
             {
                 return NotFound();
@@ -48,7 +50,6 @@ namespace PARCIAL1.Controllers
         // GET: Puestos/Create
         public IActionResult Create()
         {
-            ViewData["EmpleadoId"] = new SelectList(_context.Empleados, "id", "id");
             return View();
         }
 
@@ -61,28 +62,27 @@ namespace PARCIAL1.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(puestos);
-                await _context.SaveChangesAsync();
+                  _puestosService.Create(puestos);    
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["EmpleadoId"] = new SelectList(_context.Empleados, "id", "id", puestos.EmpleadoId);
+           
             return View(puestos);
         }
 
         // GET: Puestos/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.Puestos == null)
+            if (id == null )
             {
                 return NotFound();
             }
 
-            var puestos = await _context.Puestos.FindAsync(id);
+            
+            var empleados = _puestosService.GetById(id.Value);
             if (puestos == null)
             {
                 return NotFound();
             }
-            ViewData["EmpleadoId"] = new SelectList(_context.Empleados, "id", "id", puestos.EmpleadoId);
             return View(puestos);
         }
 
@@ -100,39 +100,23 @@ namespace PARCIAL1.Controllers
 
             if (ModelState.IsValid)
             {
-                try
-                {
-                    _context.Update(puestos);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!PuestosExists(puestos.id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
+                  _puestosService.Update(puestos);
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["EmpleadoId"] = new SelectList(_context.Empleados, "id", "id", puestos.EmpleadoId);
+            
             return View(puestos);
         }
 
         // GET: Puestos/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public IActionResult Delete(int? id)
         {
-            if (id == null || _context.Puestos == null)
+            if (id == null )
             {
                 return NotFound();
             }
 
-            var puestos = await _context.Puestos
-                .Include(p => p.Empleado)
-                .FirstOrDefaultAsync(m => m.id == id);
+            var puestos = _puestosService.GetById(id.Value);
+             
             if (puestos == null)
             {
                 return NotFound();
@@ -146,23 +130,22 @@ namespace PARCIAL1.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Puestos == null)
+            if (id == null)
             {
-                return Problem("Entity set 'EmpleadosContext.Puestos'  is null.");
+                return NotFound();
             }
-            var puestos = await _context.Puestos.FindAsync(id);
+            var puestos = _puestosService.GetById(id);
             if (puestos != null)
             {
-                _context.Puestos.Remove(puestos);
+               _puestosService.Delete(puestos);
             }
-            
-            await _context.SaveChangesAsync();
+        
             return RedirectToAction(nameof(Index));
         }
 
         private bool PuestosExists(int id)
         {
-          return (_context.Puestos?.Any(e => e.id == id)).GetValueOrDefault();
+          return (_puestosService.GetById(id) !=null);
         }
     }
 }

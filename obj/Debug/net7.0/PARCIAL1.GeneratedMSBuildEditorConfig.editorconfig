@@ -9,101 +9,101 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PARCIAL1
 build_property.RootNamespace = PARCIAL1
-build_property.ProjectDir = C:\Users\Facu Perez\OneDrive\Documentos\PROGRAMACION- ISTEA\Herramientas de Programacion\PARCIAL1\
+build_property.ProjectDir = c:\Users\Facu Perez\OneDrive\Escritorio\PARCIAL1\PARCIAL1\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Facu Perez\OneDrive\Documentos\PROGRAMACION- ISTEA\Herramientas de Programacion\PARCIAL1
+build_property.MSBuildProjectDirectory = c:\Users\Facu Perez\OneDrive\Escritorio\PARCIAL1\PARCIAL1
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Facu Perez/OneDrive/Documentos/PROGRAMACION- ISTEA/Herramientas de Programacion/PARCIAL1/Areas/Identity/Pages/_ViewStart.cshtml]
+[c:/Users/Facu Perez/OneDrive/Escritorio/PARCIAL1/PARCIAL1/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Facu Perez/OneDrive/Documentos/PROGRAMACION- ISTEA/Herramientas de Programacion/PARCIAL1/Roles/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Um9sZXNcQ3JlYXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Facu Perez/OneDrive/Documentos/PROGRAMACION- ISTEA/Herramientas de Programacion/PARCIAL1/Roles/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Um9sZXNcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Facu Perez/OneDrive/Documentos/PROGRAMACION- ISTEA/Herramientas de Programacion/PARCIAL1/Users/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VXNlcnNcRWRpdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Facu Perez/OneDrive/Documentos/PROGRAMACION- ISTEA/Herramientas de Programacion/PARCIAL1/Users/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VXNlcnNcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Facu Perez/OneDrive/Documentos/PROGRAMACION- ISTEA/Herramientas de Programacion/PARCIAL1/Views/Empleados/Create.cshtml]
+[c:/Users/Facu Perez/OneDrive/Escritorio/PARCIAL1/PARCIAL1/Views/Empleados/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Facu Perez/OneDrive/Documentos/PROGRAMACION- ISTEA/Herramientas de Programacion/PARCIAL1/Views/Empleados/Delete.cshtml]
+[c:/Users/Facu Perez/OneDrive/Escritorio/PARCIAL1/PARCIAL1/Views/Empleados/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Facu Perez/OneDrive/Documentos/PROGRAMACION- ISTEA/Herramientas de Programacion/PARCIAL1/Views/Empleados/Details.cshtml]
+[c:/Users/Facu Perez/OneDrive/Escritorio/PARCIAL1/PARCIAL1/Views/Empleados/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Facu Perez/OneDrive/Documentos/PROGRAMACION- ISTEA/Herramientas de Programacion/PARCIAL1/Views/Empleados/Edit.cshtml]
+[c:/Users/Facu Perez/OneDrive/Escritorio/PARCIAL1/PARCIAL1/Views/Empleados/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Facu Perez/OneDrive/Documentos/PROGRAMACION- ISTEA/Herramientas de Programacion/PARCIAL1/Views/Empleados/Index.cshtml]
+[c:/Users/Facu Perez/OneDrive/Escritorio/PARCIAL1/PARCIAL1/Views/Empleados/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Facu Perez/OneDrive/Documentos/PROGRAMACION- ISTEA/Herramientas de Programacion/PARCIAL1/Views/Home/Index.cshtml]
+[c:/Users/Facu Perez/OneDrive/Escritorio/PARCIAL1/PARCIAL1/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Facu Perez/OneDrive/Documentos/PROGRAMACION- ISTEA/Herramientas de Programacion/PARCIAL1/Views/Home/Privacy.cshtml]
+[c:/Users/Facu Perez/OneDrive/Escritorio/PARCIAL1/PARCIAL1/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Facu Perez/OneDrive/Documentos/PROGRAMACION- ISTEA/Herramientas de Programacion/PARCIAL1/Views/Puestos/Create.cshtml]
+[c:/Users/Facu Perez/OneDrive/Escritorio/PARCIAL1/PARCIAL1/Views/Puestos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVlc3Rvc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Facu Perez/OneDrive/Documentos/PROGRAMACION- ISTEA/Herramientas de Programacion/PARCIAL1/Views/Puestos/Delete.cshtml]
+[c:/Users/Facu Perez/OneDrive/Escritorio/PARCIAL1/PARCIAL1/Views/Puestos/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVlc3Rvc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Facu Perez/OneDrive/Documentos/PROGRAMACION- ISTEA/Herramientas de Programacion/PARCIAL1/Views/Puestos/Details.cshtml]
+[c:/Users/Facu Perez/OneDrive/Escritorio/PARCIAL1/PARCIAL1/Views/Puestos/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVlc3Rvc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Facu Perez/OneDrive/Documentos/PROGRAMACION- ISTEA/Herramientas de Programacion/PARCIAL1/Views/Puestos/Edit.cshtml]
+[c:/Users/Facu Perez/OneDrive/Escritorio/PARCIAL1/PARCIAL1/Views/Puestos/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVlc3Rvc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Facu Perez/OneDrive/Documentos/PROGRAMACION- ISTEA/Herramientas de Programacion/PARCIAL1/Views/Puestos/Index.cshtml]
+[c:/Users/Facu Perez/OneDrive/Escritorio/PARCIAL1/PARCIAL1/Views/Puestos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVlc3Rvc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Facu Perez/OneDrive/Documentos/PROGRAMACION- ISTEA/Herramientas de Programacion/PARCIAL1/Views/Shared/Error.cshtml]
+[c:/Users/Facu Perez/OneDrive/Escritorio/PARCIAL1/PARCIAL1/Views/Roles/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Facu Perez/OneDrive/Escritorio/PARCIAL1/PARCIAL1/Views/Roles/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Facu Perez/OneDrive/Escritorio/PARCIAL1/PARCIAL1/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Facu Perez/OneDrive/Documentos/PROGRAMACION- ISTEA/Herramientas de Programacion/PARCIAL1/Views/Shared/_LoginPartial.cshtml]
+[c:/Users/Facu Perez/OneDrive/Escritorio/PARCIAL1/PARCIAL1/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Facu Perez/OneDrive/Documentos/PROGRAMACION- ISTEA/Herramientas de Programacion/PARCIAL1/Views/Shared/_ValidationScriptsPartial.cshtml]
+[c:/Users/Facu Perez/OneDrive/Escritorio/PARCIAL1/PARCIAL1/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Facu Perez/OneDrive/Documentos/PROGRAMACION- ISTEA/Herramientas de Programacion/PARCIAL1/Views/_ViewImports.cshtml]
+[c:/Users/Facu Perez/OneDrive/Escritorio/PARCIAL1/PARCIAL1/Views/Users/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Facu Perez/OneDrive/Escritorio/PARCIAL1/PARCIAL1/Views/Users/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Facu Perez/OneDrive/Escritorio/PARCIAL1/PARCIAL1/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Facu Perez/OneDrive/Documentos/PROGRAMACION- ISTEA/Herramientas de Programacion/PARCIAL1/Views/_ViewStart.cshtml]
+[c:/Users/Facu Perez/OneDrive/Escritorio/PARCIAL1/PARCIAL1/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Facu Perez/OneDrive/Documentos/PROGRAMACION- ISTEA/Herramientas de Programacion/PARCIAL1/Views/Shared/_Layout.cshtml]
+[c:/Users/Facu Perez/OneDrive/Escritorio/PARCIAL1/PARCIAL1/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-7lp53qunap

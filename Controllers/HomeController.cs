@@ -1,8 +1,10 @@
 ﻿using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PARCIAL1.Models;
 
 namespace PARCIAL1.Controllers;
+
 
 public class HomeController : Controller
 {
@@ -17,7 +19,7 @@ public class HomeController : Controller
     {
         return View();
     }
-
+    [Authorize(Roles="Administrador")]
     public IActionResult Privacy()
     {
         return View();

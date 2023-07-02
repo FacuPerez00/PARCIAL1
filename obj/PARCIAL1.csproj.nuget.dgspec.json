@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Facu Perez\\OneDrive\\Documentos\\PROGRAMACION- ISTEA\\Herramientas de Programacion\\PARCIAL1\\PARCIAL1.csproj": {}
+    "C:\\Users\\Facu Perez\\OneDrive\\Escritorio\\PARCIAL1\\PARCIAL1\\PARCIAL1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Facu Perez\\OneDrive\\Documentos\\PROGRAMACION- ISTEA\\Herramientas de Programacion\\PARCIAL1\\PARCIAL1.csproj": {
+    "C:\\Users\\Facu Perez\\OneDrive\\Escritorio\\PARCIAL1\\PARCIAL1\\PARCIAL1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Facu Perez\\OneDrive\\Documentos\\PROGRAMACION- ISTEA\\Herramientas de Programacion\\PARCIAL1\\PARCIAL1.csproj",
+        "projectUniqueName": "C:\\Users\\Facu Perez\\OneDrive\\Escritorio\\PARCIAL1\\PARCIAL1\\PARCIAL1.csproj",
         "projectName": "PARCIAL1",
-        "projectPath": "C:\\Users\\Facu Perez\\OneDrive\\Documentos\\PROGRAMACION- ISTEA\\Herramientas de Programacion\\PARCIAL1\\PARCIAL1.csproj",
+        "projectPath": "C:\\Users\\Facu Perez\\OneDrive\\Escritorio\\PARCIAL1\\PARCIAL1\\PARCIAL1.csproj",
         "packagesPath": "C:\\Users\\Facu Perez\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Facu Perez\\OneDrive\\Documentos\\PROGRAMACION- ISTEA\\Herramientas de Programacion\\PARCIAL1\\obj\\",
+        "outputPath": "C:\\Users\\Facu Perez\\OneDrive\\Escritorio\\PARCIAL1\\PARCIAL1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -46,11 +46,11 @@
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.5, )"
+              "version": "[7.0.8, )"
             },
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
-              "version": "[7.0.5, )"
+              "version": "[7.0.8, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",

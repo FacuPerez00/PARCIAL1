@@ -1,30 +1,28 @@
 using System.Diagnostics;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using PARCIAL1.Models;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
-using clase11.Views.Roles.ViewModels;
+using PARCIAL1.Views.Roles.ViewModels;
 
-namespace clase11.Controllers;
-
+namespace PARCIAL1.Controllers;
 
 public class RolesController : Controller
 {
-   
+    private readonly ILogger<HomeController> _logger;
     private readonly RoleManager<IdentityRole> _roleManager;
 
     public RolesController(
-       
-        RoleManager<IdentityRole> roleManager)
+        ILogger<HomeController> logger,
+        RoleManager<IdentityRole>roleManager)
     {
-       
-        _roleManager = roleManager;
+        _logger = logger;
+        _roleManager=roleManager;
     }
 
     public IActionResult Index()
     {
-        //listar todos los roles
-        var roles = _roleManager.Roles.ToList();
+        //guarda los usuarios en el index
+        var roles= _roleManager.Roles.ToList();
         return View(roles);
     }
 
@@ -36,14 +34,20 @@ public class RolesController : Controller
     [HttpPost]
     public IActionResult Create(RoleCreateViewModel model)
     {
-        if(string.IsNullOrEmpty(model.RoleName))
+        if(string.IsNullOrEmpty(model.RoleName)) 
         {
             return View();
         }
-
-        var role = new IdentityRole(model.RoleName);
+         
+        var role= new IdentityRole(model.RoleName);
         _roleManager.CreateAsync(role);
 
         return RedirectToAction("Index");
     }
+
+    
+   
+    
+
+    
 }

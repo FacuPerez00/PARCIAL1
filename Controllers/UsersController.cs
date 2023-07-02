@@ -1,34 +1,61 @@
 using System.Diagnostics;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using PARCIAL1.Models;
+using PARCIAL1.Views.Roles.ViewModels;
 
 namespace PARCIAL1.Controllers;
 
 public class UsersController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly UserManager<IdentityUser> _userManager;
+    private readonly RoleManager<IdentityRole> _roleManager;
 
-    public UsersController(ILogger<HomeController> logger)
+    public UsersController(
+        ILogger<HomeController> logger,
+        UserManager<IdentityUser>userManager,
+        RoleManager<IdentityRole>roleManager)
     {
         _logger = logger;
+        _userManager=userManager;
+        _roleManager=roleManager;
     }
 
     public IActionResult Index()
     {
-        return View();
+        //guarda los usuarios en el index
+        var users= _userManager.Users.ToList();
+        return View(users);
+    }
+    
+    
+    public async Task<IActionResult> Edit(string id)
+    {
+        var user =await _userManager.FindByIdAsync(id);
+        
+        var userViewModel= new UserEditViewModel();
+        userViewModel.UserName=user.UserName;
+        userViewModel.Email=user.Email;
+        userViewModel.Roles= new SelectList(_roleManager.Roles.ToList());
+        return View(userViewModel);
     }
 
-    public IActionResult Privacy()
-    {
-        return View();
-    }
+    [HttpPost]
 
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
+    public async Task<IActionResult> Edit(UserEditViewModel model)
     {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+           var user= await _userManager.FindByNameAsync(model.UserName);
+           if(user !=null)
+           {
+           _userManager.AddToRoleAsync(user, model.Role);
+           }
+           
+           return RedirectToAction("Index");
     }
- 
+    
+   
     
 
     
