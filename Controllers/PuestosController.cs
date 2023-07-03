@@ -24,10 +24,11 @@ namespace PARCIAL1.Controllers
         }
 
         // GET: Puestos
-        public  IActionResult Index()
+         public IActionResult Index(string buscar)
         {
-              var list = _puestosService.GetAll();
-            return View(list);
+           
+           var list=_puestosService.GetAll(buscar);
+           return View (list);
         }
 
         // GET: Puestos/Details/5

@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PARCIAL1.Data;
 
@@ -10,9 +11,11 @@ using PARCIAL1.Data;
 namespace PARCIAL1.Migrations
 {
     [DbContext(typeof(EmpleadosContext))]
-    partial class EmpleadosContextModelSnapshot : ModelSnapshot
+    [Migration("20230703210232_login")]
+    partial class login
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.8");

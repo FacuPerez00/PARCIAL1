@@ -29,8 +29,17 @@ public class PuestosService : IPuestosService
 
     public List<Puestos> GetAll()
     {
-      //No se como hacer el return de getall por que yo utilize el filtro de buscador en esta parte del controller
       return _context.Puestos.ToList();
+    }
+    public List<Puestos> GetAll(string buscar)
+    {
+      var query = GetQuery();
+
+        if (!string.IsNullOrEmpty(buscar))
+        {
+            query = query.Where(x => x.puesto.Contains(buscar)|| x.sector.Contains(buscar));
+        }
+        return query.ToList();
     }
 
     public Puestos GetById(int id)
@@ -47,5 +56,9 @@ public class PuestosService : IPuestosService
         _context.Update(obj);
         _context.SaveChanges();
                
+    }
+    private IQueryable<Puestos> GetQuery()
+    {
+        return from Puestos in _context.Puestos select Puestos;
     }
 }

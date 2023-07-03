@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using PARCIAL1.Data;
 using PARCIAL1.Services;
 
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<EmpleadosContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("EmpleadosContext") ?? throw new InvalidOperationException("Connection string 'EmpleadosContext' not found.")));
