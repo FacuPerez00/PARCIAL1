@@ -2,6 +2,7 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using PARCIAL1.Models;
+using Microsoft.AspNetCore.Authorization;
 using PARCIAL1.Views.Roles.ViewModels;
 
 namespace PARCIAL1.Controllers;

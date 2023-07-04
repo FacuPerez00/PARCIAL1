@@ -1,9 +1,10 @@
 using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using PARCIAL1.Models;
-using PARCIAL1.Views.Roles.ViewModels;
+using PARCIAL1.Views.Users.ViewModels;
 
 namespace PARCIAL1.Controllers;
 
@@ -36,9 +37,10 @@ public class UsersController : Controller
         var user =await _userManager.FindByIdAsync(id);
         
         var userViewModel= new UserEditViewModel();
-        userViewModel.UserName=user.UserName;
-        userViewModel.Email=user.Email;
+        userViewModel.UserName=user.UserName ?? string.Empty;
+        userViewModel.Email=user.Email ?? string.Empty; 
         userViewModel.Roles= new SelectList(_roleManager.Roles.ToList());
+
         return View(userViewModel);
     }
 
@@ -49,7 +51,7 @@ public class UsersController : Controller
            var user= await _userManager.FindByNameAsync(model.UserName);
            if(user !=null)
            {
-           _userManager.AddToRoleAsync(user, model.Role);
+             await _userManager.AddToRoleAsync(user, model.Role);
            }
            
            return RedirectToAction("Index");

@@ -37,7 +37,7 @@ public class PuestosService : IPuestosService
 
         if (!string.IsNullOrEmpty(buscar))
         {
-            query = query.Where(x => x.puesto.Contains(buscar)|| x.sector.Contains(buscar));
+            query = query.Where(z => z.puesto.Contains(buscar)|| z.sector.Contains(buscar));
         }
         return query.ToList();
     }

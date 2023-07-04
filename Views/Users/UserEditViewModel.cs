@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace PARCIAL1.Views.Roles.ViewModels;
+namespace PARCIAL1.Views.Users.ViewModels;
 
 public class UserEditViewModel
 {

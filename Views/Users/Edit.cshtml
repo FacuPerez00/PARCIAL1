@@ -1,5 +1,5 @@
 @using Microsoft.AspNetCore.Identity;
-@using PARCIAL1.Views.Roles.ViewModels;
+@using PARCIAL1.Views.Users.ViewModels;
 @model UserEditViewModel
 
 
@@ -23,7 +23,8 @@
             <div class="form-group">
                 <label asp-for="Role" class="control-label"></label>
                 <select asp-for="Role" asp-items="Model.Roles">
-                    <option>Ninguno</option>
+                    <option>Encargado</option>
+                    <option>Operario</option>
                 </select>
                 <span asp-validation-for="Role" class="text-danger"></span>
             </div>

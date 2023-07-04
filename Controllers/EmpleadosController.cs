@@ -9,6 +9,7 @@ using PARCIAL1.Data;
 using PARCIAL1.Models;
 using PARCIAL1.Services;
 
+
 namespace PARCIAL1.Controllers
 {
     public class EmpleadosController : Controller
@@ -61,8 +62,7 @@ namespace PARCIAL1.Controllers
         }
 
         // POST: Empleados/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("id,name,apellido,edad,sueldo,Ambiguedad")] Empleados empleados)
@@ -112,6 +112,34 @@ namespace PARCIAL1.Controllers
             return View(empleados);
         }
 
+     //   public IActionResult CalcularSueldo(int? id)
+     //   {
+     //        if (id == null )
+     //       {
+     //           return NotFound();
+     //       }
+//
+     //       var empleados = _empleadosService.GetById(id.Value);
+     //       if (empleados == null)
+     //       {
+     //           return NotFound();
+     //       }
+//
+     //       var viewModel = new EmpleadosSueldoViewModel{
+     //           id=empleados.id,
+     //           name=empleados.name,
+     //           sueldo=empleados.sueldo
+     //       };
+     //       return View(viewModel);
+     //   }
+//
+     //   [HttpPost]
+     //   [ValidateAntiForgeryToken]
+     //   public IActionResult CalcularSueldo(EmpleadosSueldoViewModel model)
+     //   {
+     //       return View();
+     //   }
+
         // GET: Empleados/Delete/5
         public IActionResult Delete(int? id)
         {
@@ -125,7 +153,7 @@ namespace PARCIAL1.Controllers
             {
                 return NotFound();
             }
-
+            
             return View(empleados);
         }
 

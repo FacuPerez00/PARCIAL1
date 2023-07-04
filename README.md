@@ -14,8 +14,6 @@
 <h1 align="center"> Empresa Metalurgica </h1>
 <h2 align="left"> :hammer:Descripcion del Proyecto </h2>
 -->Se encontraran dos CRUD que se encontraran relacionados. Por un lado encontraremos un crud con la tabla empleados con sus respectivos datos y por el otro encontraremos otro crud en el cual poseera una tabla puestos que se encontrara relacionada con la otra tabla con un IDEmpleados para reconocer el puesto del empleado. <br>
-<h2 align="left"> 🚧Estado del Proyecto </h2>
--->El estado del proyecto se encuentra incompleto aun ya que hay agregarle funcionalidades, estructuras, datos, etc.
 <h2 align="left"> 📂Acceso al proyecto </h2>
 -->Para obtener el proyecto debe hacer click en el boton <>Code y luego descargar el archivo ZIP (Ultimo boton de la lista). Por ultimo descomprimir el archivo donde lo quieras dejar y luego abrir su respectiva carpeta con el Visual Studio/Code
 

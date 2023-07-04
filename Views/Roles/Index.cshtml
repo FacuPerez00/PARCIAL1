@@ -7,7 +7,10 @@
 <ul>
 @foreach (var item in Model)
 {
-    <li><a asp-action="Edit" asp-route-userId="@item.Id">@item.Name</a></li>
+    <li>
+        @item.Name | <a asp-action="Edit" asp-route-id="@item.Id">Asignar Role</a>   
+    </li>
+    
 }
 </ul>
     
