@@ -15,7 +15,6 @@ builder.Services.AddDbContext<EmpleadosContext>(options =>
 builder.Services.AddDefaultIdentity<IdentityUser>()
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<EmpleadosContext>();
-
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<IEmpleadosService, EmpleadosService>();
